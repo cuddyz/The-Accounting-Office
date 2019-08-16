@@ -2,12 +2,6 @@
   display: grid;
   grid-template-columns: auto;
   min-height: 100vh;
-  max-width: breaks(max);
-
-  @media (min-width: breaks(max)) {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 body {
