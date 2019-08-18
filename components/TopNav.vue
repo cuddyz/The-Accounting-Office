@@ -10,10 +10,7 @@
 
 <script>
 export default {
-  name: 'TopNav',
-  created() {
-    console.log(this.$route)
-  }
+  name: 'TopNav'
 }
 </script>
 

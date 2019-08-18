@@ -7,7 +7,7 @@
         <h2>Accounting. Anywhere.</h2>
       </div>
     </section>
-    <section class="statement flex flex-center">
+    <section class="statement flex justify-center">
       <div class="flex-1 flex column flex-center">
         <h3 class="pb-1">Our Vision</h3>
         <p>We know how to stand out from your competitors and we gladly provide our clients with various keys to achieve their goals and become successful member of business environment.</p>
@@ -25,12 +25,24 @@
         <img src="/images/Details.jpg" />
       </div>
     </section>
+    <features class="py-5" />
+    <section class="team">
+      <div class="flex column justify-center p-2">
+        <h3>Powered by our amazing team.</h3>
+        <button @click="$router.push('/team')" class="p-1">Meet the Team</button>
+      </div>
+    </section>
   </article>
 </template>
 
 <script>
+import Features from '@/components/Features'
+
 export default {
-  name: 'AboutPage'
+  name: 'AboutPage',
+  components: {
+    Features
+  }
 }
 </script>
 
@@ -71,6 +83,9 @@ export default {
 
   .statement {
     padding: 5rem 0;
+    align-items: flex-start;
+    background-color: color(white);
+
     > div{
       padding: 0 5rem;
 
@@ -78,12 +93,16 @@ export default {
         align-self: flex-start;
         font-size: 2em;
       }
+
+      p {
+        font-size: 1.4em;
+      }
     }
   }
 
   .details {
     blockquote {
-      font-size: 2.5em;
+      font-size: 2em;
       display: block;
       border-width: 2px 0;
       border-style: solid;
@@ -106,6 +125,35 @@ export default {
       font: 4em/0.9em 'PT Sans', sans-serif;
       color: color(greyDark);
       text-align: center;
+    }
+  }
+
+  .team {
+    background-image: url('/images/Team.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+
+    > div {
+      width: 40vw;
+      margin-left: 5rem;
+      height: 60vh;
+      text-align: center;
+
+      h3 {
+        font-size: 2em;
+        color: color(white);
+        padding-bottom: 0.75rem;
+      }
+
+      button {
+        font-size: 1.2em;
+        border: 5px solid color(white);
+        color: color(greyDark);
+        background-color: transparent;
+        color: color(white);
+      }
     }
   }
 </style>
