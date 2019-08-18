@@ -1,5 +1,6 @@
 <template>
   <article>
+    <section class="overlay" />
     <section class="flex align-center">
       <div class="img-container">
         <img src="/images/Logo.png" />
@@ -13,8 +14,8 @@
       <h2>Accounting. Anywhere.</h2>
     </section>
     <section class="text-center m-2">
-      <button class="clear">Learn More</button>
-      <button class="ml-1">Contact Us</button>
+      <button class="clear" @click="$router.push('/about')">Learn More</button>
+      <button class="ml-1" @click="$router.push('/contact')">Contact Us</button>
     </section>
   </article>
 </template>
@@ -36,8 +37,24 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 
     color: color(white);
+
+    > section {
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      opacity: 0.3;
+      background-color: color(black);
+    }
 
     .img-container {
       height: 15rem;

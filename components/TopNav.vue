@@ -24,6 +24,7 @@ export default {
     right: 0;
     height: 10vh;
     padding: 1rem;
+    z-index: 1;
 
     @media (min-width: breaks(phone)) {
       padding: 1rem 1rem 1rem 2rem;
