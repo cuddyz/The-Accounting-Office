@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex align-center">
+  <nav class="flex align-center" :class="{ 'bg': $route.path !== '/'}">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/team">Team</router-link>
@@ -10,7 +10,10 @@
 
 <script>
 export default {
-  name: 'TopNav'
+  name: 'TopNav',
+  created() {
+    console.log(this.$route)
+  }
 }
 </script>
 
@@ -22,9 +25,17 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
+    left: 0;
     height: 10vh;
     padding: 1rem;
     z-index: 1;
+    justify-content: flex-end;
+
+    &.bg {
+      a {
+        color: color(greyDark);
+      }
+    }
 
     @media (min-width: breaks(phone)) {
       padding: 1rem 1rem 1rem 2rem;
