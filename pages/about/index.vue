@@ -17,6 +17,14 @@
         <p>Our company strives to build a competitive advantage at each stage of the business management process in order to generate superior long-term returns, while continuously focusing on protecting investor capital.</p>
       </div>
     </section>
+    <section class="details flex flex-center">
+      <div class="flex-1 flex column flex-center">
+        <blockquote><span class="bold large">WE</span> sweat the details. So <span class="bold large">YOU</span> don't have to.</blockquote>
+      </div>
+      <div>
+        <img src="/images/Details.jpg" />
+      </div>
+    </section>
   </article>
 </template>
 
@@ -73,4 +81,31 @@ export default {
     }
   }
 
+  .details {
+    blockquote {
+      font-size: 2.5em;
+      display: block;
+      border-width: 2px 0;
+      border-style: solid;
+      border-color: color(greyDark);
+      color: color(greyDark);
+      padding: 2rem;
+      margin: 1rem;
+      position: relative;
+    }
+
+    blockquote:before {
+      content: '\201C';
+      position: absolute;
+      top: 0em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: color(greyVLight);
+      width: 3rem;
+      height: 2rem;
+      font: 4em/0.9em 'PT Sans', sans-serif;
+      color: color(greyDark);
+      text-align: center;
+    }
+  }
 </style>
