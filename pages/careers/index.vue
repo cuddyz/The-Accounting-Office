@@ -2,8 +2,8 @@
   <article>
     <section>
       <h2 class="pb-1">Interested in joining GielowKrebs Accouting?</h2>
-      <h3 class="pb-1">Drop your email below and we will reach out to you the next time we are hiring!</h3>
-      <input class="mb-1" type="text" placeholder="Email Address" v-model="email" />
+      <h3 class="mb-3">Drop your email below and we will reach out to you the next time we are hiring!</h3>
+      <input class="mb-3" type="text" placeholder="Email Address" v-model="email" />
       <button @click="submit()">Submit</button>
       <p class="mt-1" v-if="showMessage">Thank you! We will reach out to you soon!</p>
       <a class="mt-1" v-if="showLink" href="https://discord.gg/BrrjPnu" target="_blank">https://discord.gg/BrrjPnu</a>
