@@ -1,7 +1,7 @@
 <template>
   <section class="flex column p-2">
     <div class="flex-1 flex justify-center mb-1">
-      <div class="img-container" :style="{ 'background-image': `url('images/${member.picture}'`}" :aria-label="member.name" />
+      <div class="img-container" :style="{ 'background-image': `url('/images/${member.picture}'`}" :aria-label="member.name" />
     </div>
     <div class="bio flex column text-center flex-1">
       <h2 class="uppercase normal mb-50 color-grey">{{ member.name }}</h2>
