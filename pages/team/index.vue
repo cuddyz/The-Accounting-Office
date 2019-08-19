@@ -74,6 +74,8 @@ export default {
 
 <style lang="scss" scoped>
   @import './assets/styles/colors';
+  @import './assets/styles/breaks';
+
   .banner {
     height: 60vh;
     max-height: 60vh;
@@ -100,17 +102,30 @@ export default {
     }
 
     p {
-      font-size: 1.8em;
+      font-size: 1.5em;
+
+      @media (min-width: breaks(phablet)) {
+        font-size: 1.8em;
+      }
     }
+
     h2 {
-      font-size: 3em;
+      font-size: 2.3em;
+
+      @media (min-width: breaks(phablet)) {
+        font-size: 3em;
+      }
     }
   }
 
   .team {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 2rem;
+
+    @media (min-width: breaks(small-tablet)) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
