@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex align-center" :class="{ 'bg': $route.path !== '/'}">
+  <nav class="flex align-center" :class="{ 'inverse': $route.path !== '/'}">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/team">Team</router-link>
@@ -28,9 +28,13 @@ export default {
     z-index: 1;
     justify-content: flex-end;
 
-    &.bg {
+    &.inverse {
       a {
         color: color(greyDark);
+
+        &:hover {
+          color: color(black);
+        }
       }
     }
 
@@ -55,11 +59,14 @@ export default {
     font-size: 1.2em;
     padding-right: 0.75rem;
     color: color(white);
+    text-transform: uppercase;
 
     @media (min-width: breaks(phablet)) {
       padding-right: 1rem;
     }
 
-    text-transform: uppercase;
+    &:hover {
+      color: darken(color(greyVLight), 10%);
+    }
   }
 </style>

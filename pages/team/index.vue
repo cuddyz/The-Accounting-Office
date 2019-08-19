@@ -38,7 +38,7 @@ export default {
         {
           name: 'Devon Knupp',
           title: 'Head of Human Resources and Creative Director',
-          slogan: 'Put your complaint in the pile, I\'ll get to it eventually.  Actually I probably won\'t',
+          slogan: 'Put your complaint in the pile, I\'ll get to it eventually.  Actually I probably won\'t.',
           picture: 'Devon HS.jpg'
         },
         {

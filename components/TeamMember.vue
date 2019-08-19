@@ -6,7 +6,7 @@
     <div class="bio flex column text-center flex-1">
       <h2 class="uppercase normal mb-50 color-grey">{{ member.name }}</h2>
       <h3 class="color-greyDark normal pb-50">{{ member.title }}</h3>
-      <p class="color-grey pb-50 italic">"{{ member.slogan }} <a v-if="member.link" :href="member.link" target="_blank">{{ member.link }}.</a>"</p>
+      <p class="color-grey pb-50 italic">"{{ member.slogan }}<a class="pl-25" v-if="member.link" :href="member.link" target="_blank">{{ member.link }}.</a>"</p>
     </div>
   </section>
 </template>

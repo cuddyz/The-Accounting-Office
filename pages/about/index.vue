@@ -153,6 +153,12 @@ export default {
         color: color(greyDark);
         background-color: transparent;
         color: color(white);
+
+        &:hover {
+          background-color: color(greyVLight);
+          border-color: color(greyVLight);
+          color: color(black);
+        }
       }
     }
   }
