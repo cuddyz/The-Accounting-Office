@@ -72,7 +72,15 @@ export default {
     grid-gap: 1rem;
     justify-items: center;
     align-content: center;
-    margin: 5rem;
+    margin: 5rem 1rem 1rem 1rem;
+
+    @media (min-width: breaks(tablet)) {
+      margin: 5rem 3rem;
+    }
+
+    @media (min-width: breaks(laptop)) {
+      margin: 5rem;
+    }
 
     form {
       text-align: center;
@@ -106,9 +114,13 @@ export default {
   }
 
   button {
-    font-size: 1.2em;
+    font-size: 1em;
     border: 5px solid color(white);
     color: color(greyDark);
+
+    @media (min-width: breaks(tablet)) {
+      font-size: 1.2em;
+    }
 
     &:hover {
       background-color: color(greyVLight);
