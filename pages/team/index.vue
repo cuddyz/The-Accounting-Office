@@ -78,7 +78,7 @@ export default {
     height: 60vh;
     max-height: 60vh;
     padding: 2rem 0 0 2rem;
-    margin-top: 10vh;
+    margin-top: 5rem;
 
     background: url('/images/Collab.jpg');
     background-size: cover;

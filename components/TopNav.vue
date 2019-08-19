@@ -23,7 +23,7 @@ export default {
     top: 0;
     right: 0;
     left: 0;
-    height: 10vh;
+    height: 5rem;
     padding: 1rem;
     z-index: 1;
     justify-content: flex-end;
