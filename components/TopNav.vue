@@ -26,7 +26,11 @@ export default {
     height: 5rem;
     padding: 1rem;
     z-index: 1;
-    justify-content: flex-end;
+    justify-content: center;
+
+    @media (min-width: breaks(phablet)) {
+      justify-content: flex-end;
+    }
 
     &.inverse {
       a {
@@ -56,13 +60,19 @@ export default {
   }
 
   a {
-    font-size: 1.2em;
+    font-size: 0.8em;
     padding-right: 0.75rem;
     color: color(white);
     text-transform: uppercase;
 
+    @media (min-width: breaks(phone)) {
+      padding-right: 1rem;
+      font-size: 1em;
+    }
+
     @media (min-width: breaks(phablet)) {
       padding-right: 1rem;
+      font-size: 1.2em;
     }
 
     &:hover {

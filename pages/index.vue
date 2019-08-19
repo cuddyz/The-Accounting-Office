@@ -32,7 +32,11 @@ export default {
   article {
     height: 100vh;
     max-height: 100vh;
-    padding: 7rem 2rem 0 2rem;
+    padding: 5rem 1rem 0 1rem;
+
+    @media (min-width: breaks(phone)) {
+      padding: 7rem 2rem 0 2rem;
+    }
 
     @media (min-width: breaks(phablet)) {
       padding: 5rem 2rem 0 2rem;
@@ -79,8 +83,13 @@ export default {
     }
 
     .img-container {
+      height: 5rem;
+      width: 5rem;
+
+    @media (min-width: breaks(phone)) {
       height: 7rem;
       width: 7rem;
+    }
 
       @media (min-width: breaks(tablet)) {
         height: 10rem;
@@ -99,7 +108,11 @@ export default {
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
+
+      @media (min-width: breaks(phone)) {
+        font-size: 3em;
+      }
 
       @media (min-width: breaks(tablet)) {
         font-size: 3.5em;
@@ -111,7 +124,11 @@ export default {
     }
 
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
+
+      @media (min-width: breaks(phone)) {
+        font-size: 2.5em;
+      }
 
       @media (min-width: breaks(tablet)) {
         font-size: 3em;
@@ -123,9 +140,13 @@ export default {
     }
 
     button {
-      font-size: 1.2em;
+      font-size: 1em;
       border: 5px solid color(white);
       color: color(greyDark);
+
+      @media (min-width: breaks(phone)) {
+        font-size: 1.2em;
+      }
 
       &.clear{
         background-color: transparent;
