@@ -17,7 +17,7 @@
         <p>Our company strives to build a competitive advantage at each stage of the business management process in order to generate superior long-term returns, while continuously focusing on protecting investor capital.</p>
       </div>
     </section>
-    <section class="details flex flex-center">
+    <section class="details">
       <div class="flex-1 flex column flex-center">
         <blockquote><span class="bold large">WE</span> sweat the details. So <span class="bold large">YOU</span> don't have to.</blockquote>
       </div>
@@ -25,8 +25,9 @@
         <img src="/images/Details.jpg" />
       </div>
     </section>
-    <features class="py-5" />
+    <features />
     <section class="team">
+      <div class="overlay" />
       <div class="flex column justify-center p-2">
         <h3>Powered by our amazing team.</h3>
         <button @click="$router.push('/team')" class="p-1">Meet the Team</button>
@@ -48,6 +49,8 @@ export default {
 
 <style lang="scss" scoped>
   @import './assets/styles/colors';
+  @import './assets/styles/breaks';
+
   .banner {
     height: 60vh;
     max-height: 60vh;
@@ -74,43 +77,128 @@ export default {
     }
 
     p {
-      font-size: 1.8em;
+      font-size: 1.5em;
+
+      @media (min-width: breaks(phablet)) {
+        font-size: 1.8em;
+      }
     }
+
     h2 {
-      font-size: 3em;
+      font-size: 2.3em;
+
+      @media (min-width: breaks(phablet)) {
+        font-size: 3em;
+      }
     }
   }
 
   .statement {
-    padding: 5rem 0;
+    padding: 3rem 0;
     align-items: flex-start;
     background-color: color(white);
+    flex-direction: column;
+
+    @media (min-width: breaks(small-laptop)) {
+      flex-direction: row;
+    }
+
+    @media (min-width: breaks(desktop)) {
+      padding: 5rem 0;
+    }
 
     > div{
-      padding: 0 5rem;
+      padding: 2rem;
+
+      @media (min-width: breaks(phablet)) {
+        padding: 2rem 5rem;
+      }
+
+      @media (min-width: breaks(small-laptop)) {
+        padding: 0 2rem;
+      }
+
+      @media (min-width: breaks(laptop)) {
+        padding: 0 3rem;
+      }
+
+      @media (min-width: breaks(desktop)) {
+        padding: 0 5rem;
+      }
 
       h3 {
-        align-self: flex-start;
-        font-size: 2em;
+        align-self: center;
+        font-size: 1.5em;
+
+        @media (min-width: breaks(small-laptop)) {
+          align-self: flex-start;
+        }
+
+        @media (min-width: breaks(laptop)) {
+          font-size: 2em;
+        }
       }
 
       p {
-        font-size: 1.4em;
+        font-size: 1.1em;
+
+        @media (min-width: breaks(laptop)) {
+          font-size: 1.4em;
+        }
       }
     }
   }
 
   .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+    @media (min-width: breaks(phablet)) {
+      flex-direction: row;
+    }
+
+    img {
+      max-height: 50vh;
+
+      @media (min-width: breaks(phablet)) {
+        max-height: 60vh;
+      }
+
+      @media (min-width: breaks(small-tablet)) {
+        max-height: 75vh;
+      }
+
+      @media (min-width: breaks(small-laptop)) {
+        max-height: 100vh;
+      }
+    }
+
     blockquote {
-      font-size: 2em;
+      font-size: 1em;
       display: block;
       border-width: 2px 0;
       border-style: solid;
       border-color: color(greyDark);
       color: color(greyDark);
-      padding: 2rem;
+      padding: 1rem;
       margin: 1rem;
       position: relative;
+
+      @media (min-width: breaks(phone)) {
+        font-size: 1.2em;
+      }
+
+      @media (min-width: breaks(phablet)) {
+        font-size: 1.5em;
+      }
+
+      @media (min-width: breaks(tablet)) {
+        padding: 2rem;
+        font-size: 2em;
+      }
     }
 
     blockquote:before {
@@ -134,17 +222,33 @@ export default {
     background-size: cover;
     background-position: center;
     min-height: 60vh;
+    position: relative;
 
-    > div {
-      width: 40vw;
-      margin-left: 5rem;
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      opacity: 0.5;
+      background-color: color(black);
+    }
+
+    > div:nth-child(2) {
       height: 60vh;
       text-align: center;
+      position: relative;
+
+      @media (min-width: breaks(phablet)) {
+        width: 40vw;
+        margin-left: 5rem;
+      }
 
       h3 {
         font-size: 2em;
         color: color(white);
-        padding-bottom: 0.75rem;
+        padding-bottom: 1rem;
       }
 
       button {
