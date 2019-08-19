@@ -1,7 +1,7 @@
 <template>
   <article>
     <section class="overlay" />
-    <section class="flex align-center">
+    <section class="logo flex align-center">
       <div class="img-container">
         <img src="/images/Logo.png" />
       </div>
@@ -10,10 +10,10 @@
         <h1 class="pl-2">Krebs</h1>
       </div>
     </section>
-    <section class="mt-1 ml-1">
+    <section class="slogan mt-1 ml-1">
       <h2>Accounting. Anywhere.</h2>
     </section>
-    <section class="text-center m-2">
+    <section class="text-center my-2">
       <button class="clear" @click="$router.push('/about')">Learn More</button>
       <button class="ml-1" @click="$router.push('/contact')">Contact Us</button>
     </section>
@@ -28,10 +28,15 @@ export default {
 
 <style lang="scss" scoped>
   @import './assets/styles/colors';
+  @import './assets/styles/breaks';
   article {
     height: 100vh;
     max-height: 100vh;
-    padding: 2rem 0 0 2rem;
+    padding: 7rem 2rem 0 2rem;
+
+    @media (min-width: breaks(phablet)) {
+      padding: 5rem 2rem 0 2rem;
+    }
 
     background: url('/images/Banner.jpg');
     background-size: cover;
@@ -43,6 +48,23 @@ export default {
 
     > section {
       position: relative;
+    }
+
+    .slogan {
+      text-align: center;
+      margin-top: 5rem;
+
+      @media (min-width: breaks(phablet)) {
+        text-align: left;
+      }
+    }
+
+    .logo {
+      justify-content: center;
+
+      @media (min-width: breaks(phablet)) {
+        justify-content: flex-start;
+      }
     }
 
     .overlay {
@@ -57,8 +79,18 @@ export default {
     }
 
     .img-container {
-      height: 15rem;
-      width: 15rem;
+      height: 7rem;
+      width: 7rem;
+
+      @media (min-width: breaks(tablet)) {
+        height: 10rem;
+        width: 10rem;
+      }
+
+      @media (min-width: breaks(desktop)) {
+        height: 15rem;
+        width: 15rem;
+      }
 
       img {
         height: 100%;
@@ -67,11 +99,27 @@ export default {
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 3em;
+
+      @media (min-width: breaks(tablet)) {
+        font-size: 3.5em;
+      }
+
+      @media (min-width: breaks(desktop)) {
+        font-size: 4em;
+      }
     }
 
     h2 {
-      font-size: 3.5em;
+      font-size: 2.5em;
+
+      @media (min-width: breaks(tablet)) {
+        font-size: 3em;
+      }
+
+      @media (min-width: breaks(desktop)) {
+        font-size: 3.5em;
+      }
     }
 
     button {
