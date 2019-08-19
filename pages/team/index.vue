@@ -27,44 +27,44 @@ export default {
           name: 'Karch Gielow',
           title: 'CEO and Co-Founder',
           slogan: 'I will be there for you any hour of any day.  I will put you ahead of my whole family, and that means alot because I have 6 kids.',
-          picture: 'Karch HS.jpg'
+          picture: 'KarchHS.jpg'
         },
         {
           name: 'Lydia Krebs',
           title: 'Head of External Affairs and Co-Founder',
           slogan: 'Take a look around, and yea, thats my name on the building.',
-          picture: 'Lydia HS.jpg'
+          picture: 'LydiaHS.jpg'
         },
         {
           name: 'Devon Knupp',
           title: 'Head of Human Resources and Creative Director',
           slogan: 'Put your complaint in the pile, I\'ll get to it eventually.  Actually I probably won\'t.',
-          picture: 'Devon HS.jpg'
+          picture: 'DevonHS.jpg'
         },
         {
           name: 'Charlie Hill',
           title: 'Theoretical Analyst and Social Media Lead',
           slogan: 'I here by swear to provide you with at least one hot and sweaty tweet a day.',
-          picture: 'Charles HS.jpg'
+          picture: 'CharlesHS.jpg'
         },
         {
           name: 'Matt Nienhaus',
           title: 'Lead Administrative Assistant',
           slogan: 'I live and breathe to serve.',
-          picture: 'Matt HS.jpg'
+          picture: 'MattHS.jpg'
         },
         {
           name: 'Troy',
           title: 'Interim Document Co-Signer',
           slogan: 'Hey I\'m Troy.',
-          picture: 'Troy HS.jpg'
+          picture: 'TroyHS.jpg'
         },
         {
           name: 'Zack Cuddy',
           title: 'Lead Web Developer and Technical Consult',
           slogan: 'I make awesome websites like this one.  Check me out:',
           link: 'https://zack-cuddy.com',
-          picture: 'Zack HS.jpg'
+          picture: 'ZackHS.jpg'
         }
       ]
     }
