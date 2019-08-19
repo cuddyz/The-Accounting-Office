@@ -1,7 +1,7 @@
 <template>
   <article>
     <h1 class="pt-1 pb-1">Questions for us?</h1>
-    <form id="contact" name="contact" method="POST" action="/contact" data-netlify="true">
+    <form>
       <input name="form-name" value="contact" type="hidden" />
       <input name="name" aria-label="Full Name" :class="{'error': errors.fields && !contact.name }" v-model="contact.name" type="text" placeholder="Full Name" />
       <input name="email" aria-label="Email" :class="{'error': (errors.fields && !contact.email) || errors.email }" v-model="contact.email" type="email" placeholder="Email" />
@@ -12,6 +12,7 @@
     <h4 class="error" v-if="errors.fields">Make sure all the fields are filled out.</h4>
     <h4 class="error" v-if="errors.email">That email doesn't look valid to me.</h4>
     <h4 class="error" v-if="errors.post">Uh oh! Something went wrong with the POST. I console.log() it if you want to take a look!</h4>
+    <h4 v-if="showMessage">Thank you! We will reach out to you soon!</h4>
   </article>
 </template>
 
@@ -28,7 +29,8 @@ export default {
       errors: {
         fields: false,
         email: false
-      }
+      },
+      showMessage: false
     }
   },
   methods: {
@@ -37,7 +39,7 @@ export default {
         return
       }
 
-      document.getElementById('contact').submit()
+      this.showMessage = true
     },
     validForm: function() {
       if (!this.contact.name || !this.contact.email || !this.contact.details) {
