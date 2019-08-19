@@ -158,6 +158,7 @@ export default {
 
     @media (min-width: breaks(phablet)) {
       flex-direction: row;
+      padding-top: 0;
     }
 
     img {
